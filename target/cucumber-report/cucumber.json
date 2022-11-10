@@ -1,0 +1,177 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Amazon 1",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2063109700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the homepage",
+            "match": {
+              "location": "StepDefinitions.user_is_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6645700300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user searches for \"hats for men\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"hats for men\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefinitions.user_searches_for(String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-10T11:33:05.907Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2550117700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpScenario()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Amazon 2",
+        "description": "",
+        "id": "amazon-quantity-and-price-verification;amazon-2;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1886672700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user adds first hat appearing(in Stock) to Cart with quantity \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4\"",
+                  "offset": 62
+                }
+              ],
+              "location": "StepDefinitions.user_adds_first_hat_appearing_in_Stock_to_Cart_with_quantity(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 445487900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "verify that total price calculation according to quantity \"4\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4\"",
+                  "offset": 58
+                }
+              ],
+              "location": "StepDefinitions.verify_that_total_price_calculation_according_to_quantity_is_correct(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 566856800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user reduces the quantity to \"1\" in the Cart for the item selected",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinitions.user_reduces_the_quantity_to_in_the_Cart_for_the_item_selected(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2049945300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "verify that total price calculation according to quantity \"1\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 58
+                }
+              ],
+              "location": "StepDefinitions.verify_that_total_price_calculation_according_to_quantity_is_correct(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cart"
+          },
+          {
+            "name": "@wip"
+          },
+          {
+            "name": "@quantity"
+          },
+          {
+            "name": "@price"
+          }
+        ]
+      }
+    ],
+    "name": "Amazon quantity and price verification",
+    "description": "",
+    "id": "amazon-quantity-and-price-verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/amazon.feature",
+    "tags": [
+      {
+        "name": "@Cart",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 7
+        }
+      }
+    ]
+  }
+]
