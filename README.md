@@ -3,7 +3,7 @@
 
 
 Selenium & Java based `Frontend` and `Backend` automation suite utilising the BDD methodologies of Cucumber and Gherkin
-
+Cancel changes
 ## Prerequisites
 
 -  JAVA SDK 17
@@ -16,7 +16,7 @@ Intellij IDEA   -> Preferences/Settings   -> Plugins ->  Marketplace -> `Cucumbe
 
 ### Set Path Variables
 
-User Variable Path = directory for java sdk 8
+User Variable Path = directory for java sdk 17
 Set Maven home in environment Variables
 
 ### For Windows
