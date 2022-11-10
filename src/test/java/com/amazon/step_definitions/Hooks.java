@@ -20,17 +20,17 @@ public class Hooks {
 
     }
 
-//
-//    @After
-//    public void tearDown(Scenario scenario){
-//        //if the scenario fails take the screenshot
-//        if(scenario.isFailed()){
-//            final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
-//            scenario.embed(screenshot,"image/png");
-//        }
-//
-//        Driver.closeDriver();
-//    }
+
+    @After
+    public void tearDown(Scenario scenario){
+        //if the scenario fails take the screenshot
+        if(scenario.isFailed()){
+            final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
+            scenario.embed(screenshot,"image/png");
+        }
+
+        Driver.closeDriver();
+    }
 
 
 }
