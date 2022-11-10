@@ -14,7 +14,7 @@ Feature: Amazon quantity and price verification
     Then verify that total price calculation according to quantity "<decrement>" is correct
     Examples:
       | increment | decrement |
-      | 4         |1         |
+      | 5         |2         |
 
 
 

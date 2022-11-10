@@ -14,8 +14,9 @@ public class HomePage extends BasePage {
     @FindBy(linkText = "Try different image")
     public WebElement captcha;
 
-    @FindBy(xpath = "//span[normalize-space()='Camel Towing Trucker Hats Mens & Womens Classic Breathable Summer Mesh Cap with Adjustable Snapback Strap Baseball Cap']")
+    @FindBy(css = ".s-image[src='https://m.media-amazon.com/images/I/71rzcRUKucL._AC_UL320_.jpg']")
     public WebElement product;
+   //*[@class='s-image'])[4]"
 
     @FindBy(id = "quantity")
     public WebElement quantityList;
@@ -37,5 +38,12 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//*[@class='a-size-base a-color-price a-text-bold']")
     public WebElement ikinciFiyat;
+
+    @FindBy(xpath = "(//*[@data-action='update-quantity'])[22]")
+    public WebElement ortada;
+
+    @FindBy(xpath = "(//input[@type='text'])[2]")
+    public WebElement quantityInputBox;
+
 
 }

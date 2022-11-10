@@ -12,6 +12,7 @@ import io.cucumber.java.en.When;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -45,6 +46,7 @@ public class StepDefinitions {
 
     @When("user searches for {string}")
     public void user_searches_for(String searchKey) {
+        BrowserUtils.waitForPageToLoad(2);
         homePage.searchInput.sendKeys(searchKey);
         homePage.search.click();
         homePage.product.click();
@@ -79,28 +81,13 @@ public class StepDefinitions {
         Select select = new Select(homePage.shoppingChartDropdown);
         select.selectByValue("1");
         BrowserUtils.waitForVisibility(homePage.shoppingChartDropdown, 4);
-        homePage.quantityDropdown.click();
+        homePage.ortada.click();
+        homePage.quantityInputBox.click();
+        homePage.quantityInputBox.clear();
+        homePage.quantityInputBox.sendKeys(quantity);
+        homePage.quantityInputBox.sendKeys(Keys.ENTER);
+        // homePage.quantityDropdown.click();
         Driver.get().navigate().refresh();
     }
 
-//    @Then("verify that total price calculation according to quantity {string} is correct2")
-//    public void verify_that_total_price_calculation_according_to_quantity_is_correct2(String quantity) {
-//        LOG.info(quantity);
-//        expectedTotalPrice = unitPrice * Double.parseDouble(quantity);
-//        BrowserUtils.waitForVisibility(homePage.sonFIyat,10);
-//        actualPrice = Double.parseDouble(homePage.sonFIyat.getText().substring(1));
-//        assertEquals("Basket Price and actual price did not match", expectedTotalPrice, actualPrice, 0);
-//
-//    }
-
-
 }
-
-
-//    System.out.println("actual price: " + actualPrice);
-//            System.out.println("expectedTotalPrice: " + expectedTotalPrice);
-//            System.out.println("unitPrice: " + unitPrice);
-//            System.out.println("quantity: " + quantity);
-//            System.out.println("ikinci fiyat"+homePage.ikinciFiyat.getText());
-//        actualPrice1 = Double.parseDouble(homePage.ikinciFiyat.getText().substring(1));
-//      actualPrice = Double.parseDouble(homePage.totalCost.getText() + "." + homePage.totalCostFr.getText());

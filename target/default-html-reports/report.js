@@ -54,8 +54,8 @@ formatter.examples({
     },
     {
       "cells": [
-        "4",
-        "1"
+        "5",
+        "2"
       ]
     }
   ]
@@ -108,7 +108,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user adds first hat appearing(in Stock) to Cart with quantity \"4\"",
+  "name": "user adds first hat appearing(in Stock) to Cart with quantity \"5\"",
   "keyword": "And "
 });
 formatter.match({
@@ -118,7 +118,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that total price calculation according to quantity \"4\" is correct",
+  "name": "verify that total price calculation according to quantity \"5\" is correct",
   "keyword": "Then "
 });
 formatter.match({
@@ -128,7 +128,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user reduces the quantity to \"1\" in the Cart for the item selected",
+  "name": "user reduces the quantity to \"2\" in the Cart for the item selected",
   "keyword": "When "
 });
 formatter.match({
@@ -138,7 +138,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that total price calculation according to quantity \"1\" is correct",
+  "name": "verify that total price calculation according to quantity \"2\" is correct",
   "keyword": "Then "
 });
 formatter.match({
