@@ -1,1 +1,1 @@
-# amazon-aotomation
+# amazon-automation
