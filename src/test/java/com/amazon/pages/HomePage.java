@@ -33,14 +33,11 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//span[@data-feature-id='sc-update-quantity-select']//select")
     public WebElement shoppingChartDropdown;
 
-    @FindBy(xpath = "//input[@aria-label='1 Camel Towing Trucker Hat Mens &amp; Womens Classic Breathable Summer Mesh Caps with Adjustable Snapback Strap Baseball Cap Outdoor Golf Hat Gray']")
-    public WebElement quantityDropdown;
-
     @FindBy(xpath = "//*[@class='a-size-base a-color-price a-text-bold']")
-    public WebElement ikinciFiyat;
+    public WebElement priceInBasket;
 
     @FindBy(xpath = "(//*[@data-action='update-quantity'])[22]")
-    public WebElement ortada;
+    public WebElement moveCursor;
 
     @FindBy(xpath = "(//input[@type='text'])[2]")
     public WebElement quantityInputBox;

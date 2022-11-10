@@ -3,26 +3,16 @@ package com.amazon.step_definitions;
 
 import com.amazon.pages.HomePage;
 import com.amazon.utilities.BrowserUtils;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import com.amazon.utilities.ConfigurationReader;
 import com.amazon.utilities.Driver;
 import io.cucumber.java.en.When;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.Marker;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 
@@ -46,7 +36,7 @@ public class StepDefinitions {
 
     @When("user searches for {string}")
     public void user_searches_for(String searchKey) {
-        BrowserUtils.waitForPageToLoad(2);
+        BrowserUtils.waitForPageToLoad(6);
         homePage.searchInput.sendKeys(searchKey);
         homePage.search.click();
         homePage.product.click();
@@ -68,8 +58,7 @@ public class StepDefinitions {
 
         expectedTotalPrice = unitPrice * Double.parseDouble(quantity);
         BrowserUtils.waitForVisibility(homePage.shoppingChartDropdown, 4);
-        actualPrice = Double.parseDouble(homePage.ikinciFiyat.getText().substring(1));
-        BrowserUtils.waitForClickability(homePage.ikinciFiyat, 4);
+        actualPrice = Double.parseDouble(homePage.priceInBasket.getText().substring(1));
         assertEquals("Basket Price and actual price did not match", expectedTotalPrice, actualPrice, 0);
 
     }
@@ -80,13 +69,10 @@ public class StepDefinitions {
         BrowserUtils.waitForVisibility(homePage.shoppingChartDropdown, 4);
         Select select = new Select(homePage.shoppingChartDropdown);
         select.selectByValue("1");
-        BrowserUtils.waitForVisibility(homePage.shoppingChartDropdown, 4);
-        homePage.ortada.click();
-        homePage.quantityInputBox.click();
+        homePage.moveCursor.click();
         homePage.quantityInputBox.clear();
         homePage.quantityInputBox.sendKeys(quantity);
         homePage.quantityInputBox.sendKeys(Keys.ENTER);
-        // homePage.quantityDropdown.click();
         Driver.get().navigate().refresh();
     }
 

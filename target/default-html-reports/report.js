@@ -26,19 +26,19 @@ formatter.scenarioOutline({
   ]
 });
 formatter.step({
-  "name": "user adds first hat appearing(in Stock) to Cart with quantity \"\u003cincrement\u003e\"",
+  "name": "user adds first hat appearing(in Stock) to Cart with quantity \"\u003cquantity increment\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "verify that total price calculation according to quantity \"\u003cincrement\u003e\" is correct",
+  "name": "verify that total price calculation according to quantity \"\u003cquantity increment\u003e\" is correct",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "user reduces the quantity to \"\u003cdecrement\u003e\" in the Cart for the item selected",
+  "name": "user reduces the quantity to \"\u003cquantity decrement\u003e\" in the Cart for the item selected",
   "keyword": "When "
 });
 formatter.step({
-  "name": "verify that total price calculation according to quantity \"\u003cdecrement\u003e\" is correct",
+  "name": "verify that total price calculation according to quantity \"\u003cquantity decrement\u003e\" is correct",
   "keyword": "Then "
 });
 formatter.examples({
@@ -48,8 +48,8 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "increment",
-        "decrement"
+        "quantity increment",
+        "quantity decrement"
       ]
     },
     {
