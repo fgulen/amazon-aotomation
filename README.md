@@ -54,7 +54,7 @@ In order to keep common methods separate
 Java class whereby the necessary HTML objects are captured as WebElements to be manipulated by the associated model class to be able to reach and maintain easly
 
 
-### Reporting trivago-cluecumber-report-plugin
+### Reporting cluecumber-report-plugin
 Cluecucumber has a built in report generation whereby Feature files tested are automatically written to cucumbers own reporting system.
 
 [trivago-cluecumber-report-plugin](https://github.com/trivago/cluecumber-report-plugin "trivago-cluecumber-report-plugin")
