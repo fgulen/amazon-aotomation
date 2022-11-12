@@ -32,8 +32,8 @@ Create the following System variables
 
 ### Software preparation
 
-	  $ mkdir aut-tests
-          git clone https://github.com/jembi/auto-test-cucumber-framework.git
+	  $ mkdir amazon-automation
+          git clone https://github.com/fgulen/amazon-automation.git
           mvn clean test
 
 ## Framework Overview
