@@ -4,14 +4,14 @@
     "elements": [
       {
         "line": 4,
-        "name": "Amazon 1",
+        "name": "User on Amazon Webpage to search product",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1634867100,
+              "duration": 3366831100,
               "status": "passed"
             },
             "line": 5,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 7084268700,
+              "duration": 7624836600,
               "status": "passed"
             },
             "line": 6,
@@ -42,11 +42,11 @@
         ]
       },
       {
-        "start_timestamp": "2022-11-10T21:11:50.147Z",
+        "start_timestamp": "2022-11-13T21:55:31.466Z",
         "before": [
           {
             "result": {
-              "duration": 1941059600,
+              "duration": 2414981700,
               "status": "passed"
             },
             "match": {
@@ -55,13 +55,13 @@
           }
         ],
         "line": 17,
-        "name": "Amazon 2",
+        "name": "Verify that the products prices increase correctly according to the quantity increment",
         "description": "",
-        "id": "amazon-quantity-and-price-verification;amazon-2;;2",
+        "id": "amazon-product-quantity-and-price-verification;verify-that-the-products-prices-increase-correctly-according-to-the-quantity-increment;;2",
         "after": [
           {
             "result": {
-              "duration": 282145899,
+              "duration": 760870200,
               "status": "passed"
             },
             "match": {
@@ -74,15 +74,15 @@
         "steps": [
           {
             "result": {
-              "duration": 1463508900,
+              "duration": 1677650400,
               "status": "passed"
             },
             "line": 11,
-            "name": "user adds first hat appearing(in Stock) to Cart with quantity \"5\"",
+            "name": "user adds first hat appearing(in Stock) to Cart with quantity \"2\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"5\"",
+                  "val": "\"2\"",
                   "offset": 62
                 }
               ],
@@ -92,15 +92,15 @@
           },
           {
             "result": {
-              "duration": 643238501,
+              "duration": 813135300,
               "status": "passed"
             },
             "line": 12,
-            "name": "verify that total price calculation according to quantity \"5\" is correct",
+            "name": "verify that total price calculation according to quantity \"2\" is correct",
             "match": {
               "arguments": [
                 {
-                  "val": "\"5\"",
+                  "val": "\"2\"",
                   "offset": 58
                 }
               ],
@@ -110,15 +110,15 @@
           },
           {
             "result": {
-              "duration": 527343700,
+              "duration": 615658000,
               "status": "passed"
             },
             "line": 13,
-            "name": "user reduces the quantity to \"2\" in the Cart for the item selected",
+            "name": "user reduces the quantity to \"1\" in the Cart for the item selected",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2\"",
+                  "val": "\"1\"",
                   "offset": 29
                 }
               ],
@@ -128,15 +128,15 @@
           },
           {
             "result": {
-              "duration": 1610227400,
+              "duration": 1882029700,
               "status": "passed"
             },
             "line": 14,
-            "name": "verify that total price calculation according to quantity \"2\" is correct",
+            "name": "verify that total price calculation according to quantity \"1\" is correct",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2\"",
+                  "val": "\"1\"",
                   "offset": 58
                 }
               ],
@@ -161,9 +161,9 @@
         ]
       }
     ],
-    "name": "Amazon quantity and price verification",
+    "name": "Amazon product quantity and price verification",
     "description": "",
-    "id": "amazon-quantity-and-price-verification",
+    "id": "amazon-product-quantity-and-price-verification",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/amazon.feature",
     "tags": [

@@ -14,14 +14,4 @@ Feature: Amazon product quantity and price verification
     Then verify that total price calculation according to quantity "<quantity decrement>" is correct
     Examples:
       | quantity increment | quantity decrement |
-      | 5                  | 2                  |
-
-
-
-#  Go to https://www.amazon.com
-#  Search for “hats for men”
-#  Add the first hat appearing to Cart with quantity 2
-#  Open cart and assert that the total price and quantity are correct
-#  Reduce the quantity from 2 to 1 in Cart for the item selected in the step 3
-#  Assert that the total price and quantity has been correctly changed
-#
+      | 2                  | 1                  |

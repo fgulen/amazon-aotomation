@@ -42,31 +42,31 @@
 
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>com.trivago.rta</groupId>-->
-<!--                <artifactId>cluecumber-report-plugin</artifactId>-->
-<!--                <version>2.6.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>report</id>-->
-<!--                        <phase>post-integration-test</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>reporting</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>-->
-<!--                    <generatedHtmlReportDirectory>${project.build.directory}/Cluecumber-Report-->
-<!--                    </generatedHtmlReportDirectory>-->
-<!--                    <customPageTitle>Amazon.com Report</customPageTitle>-->
+            <plugin>
+                <groupId>com.trivago.rta</groupId>
+                <artifactId>cluecumber-report-plugin</artifactId>
+                <version>2.6.1</version>
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>reporting</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
+                    <generatedHtmlReportDirectory>${project.build.directory}/Cluecumber-Report
+                    </generatedHtmlReportDirectory>
+                    <customPageTitle>Amazon.com Report</customPageTitle>
 
-<!--                    <customParameters>-->
-<!--                        <Test_Name>amazon.com</Test_Name>-->
-<!--                        <Custom_URL>https://amazon.com/</Custom_URL>-->
-<!--                    </customParameters>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+                    <customParameters>
+                        <Test_Name>amazon.com</Test_Name>
+                        <Custom_URL>https://amazon.com/</Custom_URL>
+                    </customParameters>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>net.masterthought</groupId>
@@ -96,6 +96,29 @@
     </build>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

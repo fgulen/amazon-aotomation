@@ -9,10 +9,10 @@ import com.amazon.utilities.ConfigurationReader;
 import com.amazon.utilities.Driver;
 import io.cucumber.java.en.When;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,7 +26,7 @@ public class StepDefinitions {
 
     String url = ConfigurationReader.get("url");
     HomePage homePage = new HomePage();
-    private static final Logger LOG = LoggerFactory.getLogger(StepDefinitions.class);
+    private static final Logger LOG = LogManager.getLogger(StepDefinitions.class);
 
     @Given("user is on the homepage")
     public void user_is_on_the_homepage() {
@@ -36,7 +36,6 @@ public class StepDefinitions {
 
     @When("user searches for {string}")
     public void user_searches_for(String searchKey) {
-        BrowserUtils.waitForPageToLoad(6);
         homePage.searchInput.sendKeys(searchKey);
         homePage.search.click();
         homePage.product.click();
@@ -59,7 +58,12 @@ public class StepDefinitions {
         expectedTotalPrice = unitPrice * Double.parseDouble(quantity);
         BrowserUtils.waitForVisibility(homePage.shoppingChartDropdown, 4);
         actualPrice = Double.parseDouble(homePage.priceInBasket.getText().substring(1));
-        assertEquals("Basket Price and actual price did not match", expectedTotalPrice, actualPrice, 0);
+        assertEquals("!!!Basket Price and actual price did not match", expectedTotalPrice, actualPrice, 0);
+
+        LOG.info(String.format("Unit Price : %s ",  unitPrice));
+        LOG.info(String.format("Quantity : %s",quantity));
+        LOG.info(String.format("Actual Price : %s",actualPrice));
+        LOG.info(String.format("Expected Price : %s",expectedTotalPrice));
 
     }
 

@@ -33,7 +33,7 @@ Create the following System variables
 ### Software preparation
 
 	  $ mkdir aut-tests
-          git clone https://github.com/jembi/auto-test-cucumber-framework.git
+          git clone https://github.com/fgulen/amazon-automation
           mvn clean test
 
 ## Framework Overview
@@ -54,11 +54,12 @@ In order to keep common methods separate
 Java class whereby the necessary HTML objects are captured as WebElements to be manipulated by the associated model class to be able to reach and maintain easly
 
 
-### Reporting cluecumber-report-plugin
-Cluecucumber has a built in report generation whereby Feature files tested are automatically written to cucumbers own reporting system.
+### Reporting plugins
+Built in report generation whereby Feature files tested are automatically written to cucumbers own reporting system.
 
-[trivago-cluecumber-report-plugin](https://github.com/trivago/cluecumber-report-plugin "trivago-cluecumber-report-plugin")
-
+#### Cluecumber-report
+#### Cucumber HTML Report
+#### Default HTML report
 ```
 To run Report
          mvn clean
@@ -66,7 +67,7 @@ To run Report
 ```
 
 # Test cases in Gherkin format
-### Base Page
+
 
 ```
 

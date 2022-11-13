@@ -1,0 +1,4 @@
+13.11.2022 22:55:49,860 INFO  StepDefinitions:63 - Unit Price : 13.99 
+13.11.2022 22:55:49,865 INFO  StepDefinitions:64 - Quantity : 1
+13.11.2022 22:55:49,865 INFO  StepDefinitions:65 - Actual Price : 13.99
+13.11.2022 22:55:49,866 INFO  StepDefinitions:66 - Expected Price : 13.99

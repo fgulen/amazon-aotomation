@@ -1,6 +1,6 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/amazon.feature");
 formatter.feature({
-  "name": "Amazon quantity and price verification",
+  "name": "Amazon product quantity and price verification",
   "description": "",
   "keyword": "Feature",
   "tags": [
@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "name": "Amazon 2",
+  "name": "Verify that the products prices increase correctly according to the quantity increment",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -54,14 +54,14 @@ formatter.examples({
     },
     {
       "cells": [
-        "5",
-        "2"
+        "2",
+        "1"
       ]
     }
   ]
 });
 formatter.background({
-  "name": "Amazon 1",
+  "name": "User on Amazon Webpage to search product",
   "description": "",
   "keyword": "Background"
 });
@@ -89,7 +89,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Amazon 2",
+  "name": "Verify that the products prices increase correctly according to the quantity increment",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -108,7 +108,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user adds first hat appearing(in Stock) to Cart with quantity \"5\"",
+  "name": "user adds first hat appearing(in Stock) to Cart with quantity \"2\"",
   "keyword": "And "
 });
 formatter.match({
@@ -118,7 +118,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that total price calculation according to quantity \"5\" is correct",
+  "name": "verify that total price calculation according to quantity \"2\" is correct",
   "keyword": "Then "
 });
 formatter.match({
@@ -128,7 +128,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user reduces the quantity to \"2\" in the Cart for the item selected",
+  "name": "user reduces the quantity to \"1\" in the Cart for the item selected",
   "keyword": "When "
 });
 formatter.match({
@@ -138,7 +138,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that total price calculation according to quantity \"2\" is correct",
+  "name": "verify that total price calculation according to quantity \"1\" is correct",
   "keyword": "Then "
 });
 formatter.match({
