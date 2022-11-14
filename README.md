@@ -30,11 +30,6 @@ Create the following System variables
 - Add directory to your chromedriver.exe
 
 
-### Software preparation
-
-	  $ mkdir aut-tests
-          git clone https://github.com/fgulen/amazon-automation
-          mvn clean test
 
 ## Framework Overview
 
@@ -51,15 +46,18 @@ The feature file specifies the steps in BDD language style (`Plain English Langu
 In order to keep common methods separate
 
 ### Page Object Model
-Java class whereby the necessary HTML objects are captured as WebElements to be manipulated by the associated model class to be able to reach and maintain easly
+Java class whereby the necessary HTML objects are captured as WebElements to be manipulated by the associated model class to be able to reach and maintain easily
 
 
 ### Reporting plugins
-Built in report generation whereby Feature files tested are automatically written to cucumbers own reporting system.
+Built-in report generation, whereby Feature files tested are automatically written to Cucumber's own reporting system.
 
-#### Cluecumber-report
-#### Cucumber HTML Report
-#### Default HTML report
+<ul>
+  <li>Cluecumber-report</li>
+  <li>Cucumber HTML Report</li>
+  <li>Default HTML report</li>
+</ul>
+
 ```
 To run Report
          mvn clean
@@ -72,19 +70,19 @@ To run Report
 ```
 
 @Cart @wip
-Feature: Amazon quantity and price verification
+Feature: Amazon product quantity and price verification
 
-  Background:Amazon 1
+  Background:User on Amazon Webpage to search product
     Given user is on the homepage
     When user searches for "hats for men"
 
 
   @quantity @price
-  Scenario Outline: Amazon 2
-    And user adds first hat appearing(in Stock) to Cart with quantity "<increment>"
-    Then verify that total price calculation according to quantity "<increment>" is correct
-    When user reduces the quantity to "<decrement>" in the Cart for the item selected
-    Then verify that total price calculation according to quantity "<decrement>" is correct
+  Scenario Outline: Verify that the products prices increase correctly according to the quantity increment
+    And user adds first hat appearing(in Stock) to Cart with quantity "<quantity increment>"
+    Then verify that total price calculation according to quantity "<quantity increment>" is correct
+    When user reduces the quantity to "<quantity decrement>" in the Cart for the item selected
+    Then verify that total price calculation according to quantity "<quantity decrement>" is correct
     Examples:
-      | increment | decrement |
-      | 4         |1         |
+      | quantity increment | quantity decrement |
+      | 2                  | 1                  |

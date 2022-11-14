@@ -64,6 +64,7 @@ public class StepDefinitions {
         LOG.info(String.format("Quantity : %s",quantity));
         LOG.info(String.format("Actual Price : %s",actualPrice));
         LOG.info(String.format("Expected Price : %s",expectedTotalPrice));
+        LOG.info("--------------------------------------------------------");
 
     }
 
