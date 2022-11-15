@@ -86,7 +86,8 @@ formatter.match({
   "location": "StepDefinitions.user_searches_for(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NumberFormatException: For input string: \".\"\r\n\tat java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)\r\n\tat java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)\r\n\tat java.base/java.lang.Double.parseDouble(Double.java:651)\r\n\tat com.amazon.step_definitions.StepDefinitions.user_searches_for(StepDefinitions.java:43)\r\n\tat ✽.user searches for \"hats for men\"(file:src/test/resources/features/amazon.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.scenario({
   "name": "Verify that the products prices increase correctly according to the quantity increment",
@@ -115,7 +116,7 @@ formatter.match({
   "location": "StepDefinitions.user_adds_first_hat_appearing_in_Stock_to_Cart_with_quantity(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "verify that total price calculation according to quantity \"2\" is correct",
@@ -125,7 +126,7 @@ formatter.match({
   "location": "StepDefinitions.verify_that_total_price_calculation_according_to_quantity_is_correct(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user reduces the quantity to \"1\" in the Cart for the item selected",
@@ -135,7 +136,7 @@ formatter.match({
   "location": "StepDefinitions.user_reduces_the_quantity_to_in_the_Cart_for_the_item_selected(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "verify that total price calculation according to quantity \"1\" is correct",
@@ -145,8 +146,9 @@ formatter.match({
   "location": "StepDefinitions.verify_that_total_price_calculation_according_to_quantity_is_correct(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
+formatter.embedding("image/png", "embedded0.png", null);
 formatter.after({
   "status": "passed"
 });

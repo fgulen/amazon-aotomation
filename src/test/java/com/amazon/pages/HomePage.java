@@ -14,9 +14,9 @@ public class HomePage extends BasePage {
     @FindBy(linkText = "Try different image")
     public WebElement captcha;
 
-    @FindBy(css = ".s-image[src='https://m.media-amazon.com/images/I/71rzcRUKucL._AC_UL320_.jpg']")
+    @FindBy(xpath = "//img[@alt=\"Nike Men's 518015-010 Tech Swoosh Cap\"]")
     public WebElement product;
-   //*[@class='s-image'])[4]"
+    //*[@class='s-image'])[4]"
 
     @FindBy(id = "quantity")
     public WebElement quantityList;

@@ -12,6 +12,7 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.Assert.assertEquals;
@@ -41,14 +42,31 @@ public class StepDefinitions {
         homePage.product.click();
         unitPrice = Double.parseDouble(homePage.priceWhole.getText() + "." + homePage.priceFraction.getText());
 
+        try {
+        } catch (NumberFormatException e) {
+
+            System.out.println(homePage.priceWhole.getText());
+            System.out.println(homePage.priceFraction.getText());
+        }
+
+
     }
 
     @When("user adds first hat appearing\\(in Stock) to Cart with quantity {string}")
     public void user_adds_first_hat_appearing_in_Stock_to_Cart_with_quantity(String userSelectQuantity) {
         quantity = Integer.parseInt(userSelectQuantity);
-        Select listOfQuantity = new Select(homePage.quantityList);
-        listOfQuantity.selectByVisibleText(String.valueOf(quantity));
-        homePage.addToChart.click();
+
+        try {
+            Select listOfQuantity = new Select(homePage.quantityList);
+            listOfQuantity.selectByVisibleText(String.valueOf(quantity));
+            homePage.addToChart.click();
+        } catch (NoSuchElementException e) {
+            LOG.warn("!!!This seller has a limit of 1 per customer or the product is out of stock");
+            Driver.closeDriver();
+            System.exit(1);
+
+        }
+
     }
 
 
@@ -60,10 +78,10 @@ public class StepDefinitions {
         actualPrice = Double.parseDouble(homePage.priceInBasket.getText().substring(1));
         assertEquals("!!!Basket Price and actual price did not match", expectedTotalPrice, actualPrice, 0);
 
-        LOG.info(String.format("Unit Price : %s ",  unitPrice));
-        LOG.info(String.format("Quantity : %s",quantity));
-        LOG.info(String.format("Actual Price : %s",actualPrice));
-        LOG.info(String.format("Expected Price : %s",expectedTotalPrice));
+        LOG.info(String.format("Unit Price : %s ", unitPrice));
+        LOG.info(String.format("Quantity : %s", quantity));
+        LOG.info(String.format("Actual Price : %s", actualPrice));
+        LOG.info(String.format("Expected Price : %s", expectedTotalPrice));
         LOG.info("--------------------------------------------------------");
 
     }
