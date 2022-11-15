@@ -42,14 +42,6 @@ public class StepDefinitions {
         homePage.product.click();
         unitPrice = Double.parseDouble(homePage.priceWhole.getText() + "." + homePage.priceFraction.getText());
 
-        try {
-        } catch (NumberFormatException e) {
-
-            System.out.println(homePage.priceWhole.getText());
-            System.out.println(homePage.priceFraction.getText());
-        }
-
-
     }
 
     @When("user adds first hat appearing\\(in Stock) to Cart with quantity {string}")

@@ -1,5 +1,5 @@
-16.11.2022 00:30:12,750 INFO  StepDefinitions:81 - Unit Price : 25.28 
-16.11.2022 00:30:12,759 INFO  StepDefinitions:82 - Quantity : 1
-16.11.2022 00:30:12,760 INFO  StepDefinitions:83 - Actual Price : 25.28
-16.11.2022 00:30:12,760 INFO  StepDefinitions:84 - Expected Price : 25.28
-16.11.2022 00:30:12,760 INFO  StepDefinitions:85 - --------------------------------------------------------
+16.11.2022 00:35:47,191 INFO  StepDefinitions:73 - Unit Price : 25.28 
+16.11.2022 00:35:47,198 INFO  StepDefinitions:74 - Quantity : 1
+16.11.2022 00:35:47,199 INFO  StepDefinitions:75 - Actual Price : 25.28
+16.11.2022 00:35:47,199 INFO  StepDefinitions:76 - Expected Price : 25.28
+16.11.2022 00:35:47,199 INFO  StepDefinitions:77 - --------------------------------------------------------
