@@ -1,8 +1,8 @@
-@Cart @wip
+@QuantityPriceVerification
 Feature: Amazon product quantity and price verification
 
   Background:User on Amazon Webpage to search product
-    Given user is on the homepage
+    Given user launch fb homepage
     When user searches for "hats for men"
 
 
