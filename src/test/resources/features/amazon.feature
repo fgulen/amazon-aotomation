@@ -2,7 +2,7 @@
 Feature: Amazon product quantity and price verification
 
   Background:User on Amazon Webpage to search product
-    Given user launch fb homepage
+    Given user launches amazon homepage
     When user searches for "hats for men"
 
 

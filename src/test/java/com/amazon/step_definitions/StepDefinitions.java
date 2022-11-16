@@ -29,7 +29,7 @@ public class StepDefinitions {
     HomePage homePage = new HomePage();
     private static final Logger LOG = LogManager.getLogger(StepDefinitions.class);
 
-    @Given("user launch fb homepage")
+    @Given("user launches amazon homepage")
     public void user_is_on_the_homepage() {
         Driver.get().get(url);
 //      homePage.captcha.click();
