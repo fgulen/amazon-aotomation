@@ -16,7 +16,12 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//img[@alt=\"Nike Men's 518015-010 Tech Swoosh Cap\"]")
     public WebElement product;
-    //*[@class='s-image'])[4]"
+
+//    @FindBy(xpath = "(//*[@class='s-image'])[2]")
+//    public WebElement product;
+
+    @FindBy(xpath = "(//*[@class='a-color-price a-text-bold'])[1]")
+    public WebElement outOfStock;
 
     @FindBy(id = "quantity")
     public WebElement quantityList;

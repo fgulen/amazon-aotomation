@@ -13,9 +13,8 @@ import org.junit.runner.RunWith;
                   "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "com/amazon/step_definitions",
-        monochrome = true,
         dryRun = false,
-        tags = "@wip"
+        tags = "@QuantityPriceVerification"
 )
 public class CukesRunner {
 }

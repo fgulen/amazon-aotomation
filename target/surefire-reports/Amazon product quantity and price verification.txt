@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Amazon product quantity and price verification
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.159 s - in Amazon product quantity and price verification
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.143 s - in Amazon product quantity and price verification
