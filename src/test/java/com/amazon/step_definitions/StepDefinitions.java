@@ -41,6 +41,7 @@ public class StepDefinitions {
     public void user_searches_for(String searchKey) {
         homePage.searchInput.sendKeys(searchKey);
         homePage.search.click();
+
     }
 
     @And("user adds to Cart {int} \\(st nd rd th) appearing hat with quantity {string}")
@@ -48,15 +49,15 @@ public class StepDefinitions {
         quantity = Integer.parseInt(userSelectQuantity);
         // homePage.product.click();
 
-        WebElement product = Driver.get().findElement(By.xpath("(//*[@class='s-image'])[" + orderOfProduct + "]"));
-        BrowserUtils.waitForClickability(product, 3);
+        WebElement product= Driver.get().findElement(By.xpath("(//*[@class='s-image'])[" + orderOfProduct + "]"));
+        BrowserUtils.waitForClickability(product,3);
         product.click();
 
         try {
-            String unitPriceString = homePage.priceWhole.getText() + "." + homePage.priceFraction.getText();
+            String unitPriceString= homePage.priceWhole.getText() + "." + homePage.priceFraction.getText();
             unitPrice = Double.parseDouble(unitPriceString);
         } catch (NoSuchElementException | NumberFormatException e) {
-            LOG.warn("*** The product has no Price to compare ***");
+            LOG.warn("*** The product has no Price and Quantity dropdown menu ***");
             Driver.closeDriver();
             System.exit(1);
         }
@@ -69,6 +70,7 @@ public class StepDefinitions {
             LOG.warn("*** This seller has a limit of 1 per customer or the product is out of stock ***");
             Driver.closeDriver();
             System.exit(1);
+
         }
     }
 
@@ -86,6 +88,7 @@ public class StepDefinitions {
 //        LOG.info(String.format("Actual Price : %s", actualPrice));
 //        LOG.info(String.format("Expected Price : %s", expectedTotalPrice));
 //        LOG.info("--------------------------------------------------------");
+
     }
 
     @When("user reduces the quantity to {string} in the Cart for the item selected")
@@ -100,4 +103,6 @@ public class StepDefinitions {
         homePage.quantityInputBox.sendKeys(Keys.ENTER);
         Driver.get().navigate().refresh();
     }
+
+
 }
