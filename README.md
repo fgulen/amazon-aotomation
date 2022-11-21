@@ -52,11 +52,18 @@ Java class whereby the necessary HTML objects are captured as WebElements to be 
 ### Reporting plugins
 Built-in report generation, whereby Feature files tested are automatically written to Cucumber's own reporting system.
 
+```
+To run Report
+         mvn clean
+         mvn verify => the folders and files will be created as HTML format
+```
 <ul>
   <li>Cluecumber-report</li>
   <li>Cucumber HTML Report</li>
   <li>Default HTML report</li>
 </ul>
+
+### CucumberReport Preview
 
 ![CucumberHtmlReport.png](CucumberHtmlReport.png)
 
@@ -64,11 +71,6 @@ Built-in report generation, whereby Feature files tested are automatically writt
 
 ![FeatureFile.png](FeatureFile.png)
 
-```
-To run Report
-         mvn clean
-         mvn verify => the folders and files will be created as HTML format
-```
 
 # Test cases in Gherkin format
 
