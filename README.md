@@ -67,7 +67,7 @@ To run Report
 
 ![CucumberHtmlReport.png](CucumberHtmlReport.png)
 
-###To run from features file or CukesRunner
+### To run the Tests from features file or CukesRunner
 
 ![FeatureFile.png](FeatureFile.png)
 
