@@ -58,11 +58,11 @@ Built-in report generation, whereby Feature files tested are automatically writt
   <li>Default HTML report</li>
 </ul>
 
-
+![CucumberHtmlReport.png](CucumberHtmlReport.png)
 
 ###To run from features file or CukesRunner
 
-![img.png](img.png)
+![FeatureFile.png](FeatureFile.png)
 
 ```
 To run Report
