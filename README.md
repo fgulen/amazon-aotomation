@@ -64,7 +64,7 @@ Built-in report generation, whereby Feature files tested are automatically writt
 
 ![img.png](img.png)
 
-
+```
 To run Report
          mvn clean
          mvn verify => the folders and files will be created as HTML format
@@ -75,20 +75,21 @@ To run Report
 
 ```
 
-@Cart @wip
+@QuantityPriceVerification
 Feature: Amazon product quantity and price verification
 
   Background:User on Amazon Webpage to search product
-    Given user is on the homepage
+    Given user launches amazon homepage
     When user searches for "hats for men"
 
 
   @quantity @price
   Scenario Outline: Verify that the products prices increase correctly according to the quantity increment
-    And user adds first hat appearing(in Stock) to Cart with quantity "<quantity increment>"
-    Then verify that total price calculation according to quantity "<quantity increment>" is correct
+    And user adds to Cart 1 (st nd rd th) appearing hat with quantity "<quantity increment>"
+    Then verify that total price calculation according to "<quantity increment>" is correct
     When user reduces the quantity to "<quantity decrement>" in the Cart for the item selected
-    Then verify that total price calculation according to quantity "<quantity decrement>" is correct
+    Then verify that total price calculation according to "<quantity decrement>" is correct
+
     Examples:
       | quantity increment | quantity decrement |
       | 2                  | 1                  |
