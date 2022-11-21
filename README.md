@@ -59,6 +59,11 @@ Built-in report generation, whereby Feature files tested are automatically writt
 </ul>
 
 ```
+To run from from fetures file or CukesRunner
+
+![img.png](img.png)
+
+```
 To run Report
          mvn clean
          mvn verify => the folders and files will be created as HTML format
